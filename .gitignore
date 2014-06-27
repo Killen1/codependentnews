@@ -1,0 +1,33 @@
+# Don't add the Local settings file to the repository #
+htdocs/wp-config-local.php
+ 
+# No need to add the upgrade folder to the repo #
+htdocs/wp-content/upgrade/*
+ 
+# no need for these #
+readme.html
+license.txt
+.log
+.DS_Store
+.ht*
+/wp-*.php
+xmlrpc.php
+wp-admin/
+wp-includes/
+wp-content/plugins/index.php
+wp-content/uploads/
+wp-content/blogs.dir/
+wp-content/upgrade/*
+wp-content/backup-db/*
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+wp-content/cache/*
+wp-content/cache/supercache/*
+sitemap.xml
+sitemap.xml.gz
+readme.html
+license.txt
+/index.php
+node_modules/
+
+

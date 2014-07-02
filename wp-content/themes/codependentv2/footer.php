@@ -1,23 +1,23 @@
-	</div><!--container div in header-->
-	<footer class="container margin-bottom-20">
-		<div class="row">
-			<div id="footer" class="col-xs-12">
-				<?php
-					wp_nav_menu( array( 
-						'theme_location' => 'primary', 
-						'menu_class'     => 'nav-menu', 
-						'items_wrap'     => '<ul class="nav navbar-nav">%3$s</ul>', 
-					)); 
-				?>
-				<div id="back-to-top" class="margin-top-5">
-					<p class="text-right"><a href="#width-wrapper" title="Back to Top">Back to Top <i class="fa fa-arrow-circle-up fa-lg"></i></a></p>
-				</div>
+</div><!--container div in header-->
+<footer class="container margin-bottom-20">
+	<div class="row">
+		<div id="footer" class="col-xs-12">
+			<?php
+				wp_nav_menu( array( 
+					'theme_location' => 'primary', 
+					'menu_class'     => 'nav-menu', 
+					'items_wrap'     => '<ul class="nav navbar-nav">%3$s</ul>', 
+				)); 
+			?>
+			<div id="back-to-top" class="margin-top-5">
+				<p class="text-right"><a href="#width-wrapper" title="Back to Top">Back to Top <i class="fa fa-arrow-circle-up fa-lg"></i></a></p>
 			</div>
-			<div class="col-xs-12">
-				<p class="copyright text-right">&copy;<?php echo date("Y") ?> <?php bloginfo('name'); ?>. All Rights Reserved.</p>
-			</div>
-		</div>	
-	</footer>
+		</div>
+		<div class="col-xs-12">
+			<p class="copyright text-right">&copy;<?php echo date("Y") ?> <?php bloginfo('name'); ?>. All Rights Reserved.</p>
+		</div>
+	</div>	
+</footer>
 <!--[if lt IE 9]>
   <script src="<?php echo SITE_ROOT; ?>assets/js/respond.min.js"></script>
 <![endif]-->
@@ -33,13 +33,6 @@
 	      'numPreferredServices' : 5
 	    }   
   	});
-	jQuery(document).ready(function($){
-	  	$('#back-to-top a').on("click",function(){
-			$('html,body').animate({ scrollTop: 0 }, 'slow', function () {
-                      
-            });
-		}); 
-	});
 	//Google Analytics
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

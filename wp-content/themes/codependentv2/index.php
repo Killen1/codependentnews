@@ -1,9 +1,6 @@
-<?php
-//debug 
-//echo "<pre>"; print_r($_SERVER); die();
-get_header(); ?>
+<?php get_header(); ?>
 	<section class="row border-row">
-		<div class="bg-wht col-lg-height col-top col-xs-12 col-lg-8">	
+		<div class="col-lg-height col-top col-xs-12 col-lg-8">	
 			<div class="row">
 				<div id="carousel-example-generic" class="carousel slide col-xs-12 margin-top-20 margin-bottom-20" data-ride="carousel">
 				  	<ol class="carousel-indicators">
@@ -27,7 +24,7 @@ get_header(); ?>
 								<? $active = ($count == 1); ?>
 								<?php $slider->the_post(); ?>
 							    <div class="item <?php if ($active) {echo "active";}; ?>">
-							      	<a href="<?php the_permalink();?>" title="<?php the_title(); ?>"><?php echo get_the_post_thumbnail( $post_id, array(750,450), array('alt' => 'Slider Image') ); ?></a>
+							      	<a href="<?php the_permalink();?>" title="<?php the_title(); ?>"><?php echo get_the_post_thumbnail($post_id, array(750,450), array('alt' => 'Slider Image')); ?></a>
 							      	<div class="carousel-caption">
 							        	<h4><a href="<?php the_permalink();?>" title="<?php the_title(); ?>" class="wht"><?php the_title(); ?></a></h4>
 							      	</div>
@@ -47,23 +44,19 @@ get_header(); ?>
 								<?php $latest_news->the_post(); ?>
 									<div class="news-post margin-bottom-30 col-xs-12">
 										<div class="row">
-											<div class="col-xs-7 col-sm-3 col-md-2 col-lg-3">
+											<div class="col-sm-4 col-md-3 col-lg-4">
 							      				<a href="<?php the_permalink();?>" title="<?php the_title(); ?>">
-							      					<?php if( has_post_thumbnail()) :?>
-							      						<?php echo get_the_post_thumbnail( $post_id, array(150,150), array('alt' => 'Post Photo') ); ?>
-							      					<?else:?>
-							      						<img src="" alt="The Co-Dependent">
-													<?php endif ;?>
+							      					<?php echo get_the_post_thumbnail( $post_id, array(225,225), array('alt' => 'Post Photo') ); ?>
 							      				</a>
 							      			</div>
-							      			<div class="col-xs-7 col-sm-9 col-md-10 col-lg-9">
+							      			<div class="col-sm-8 col-md-9 col-lg-8">
 							      				<h4 class="margin-top-0"><a href="<?php the_permalink();?>" title="<?php the_title();?>"><?php the_title(); ?></a></h4>
 												<p><i class="fa fa-calendar"></i> <?php the_time('F j, Y'); ?> | <?php the_author(); ?></p>
 							      				<p>
 							      					<?php 
 														$excerpt = get_the_excerpt();
-														echo substr($excerpt, 0, 200);
-														if (strlen($excerpt) > 200) echo " ...";
+														echo substr($excerpt, 0, 190);
+														if (strlen($excerpt) > 190) echo " ...";
 											 		?>
 							      				</p>
 							      				<p><a href="<?php the_permalink();?>" title="Read More">Read More <i class="fa fa-arrow-circle-right"></i></a></p>

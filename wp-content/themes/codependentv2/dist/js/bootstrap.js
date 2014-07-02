@@ -2111,4 +2111,10 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
     })
   })
 
+//back to top
+$('#back-to-top a').on("click",function(){
+  $('html,body').animate({ scrollTop: 0 }, 'slow', function () {
+              
+    });
+});
 }(jQuery);

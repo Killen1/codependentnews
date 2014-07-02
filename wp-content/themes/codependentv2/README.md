@@ -1,1 +1,1 @@
-This is a custom Bootstrap 3 theme for Codependent News by Nathan Killen.
+This is a custom Twitter Bootstrap 3 theme for Codependent News by Nathan Killen.

@@ -11,7 +11,7 @@ module.exports = function(grunt) {
             },
             js: {
                 files: {
-                    'dist/js/codependent.min.js': ['assets/js/collapse.js', 'assets/js/carousel.js', 'assets/js/custom-js.js', 'assets/js/transition.js']
+                    'dist/js/codependent.min.js': ['dist/js/bootstrap.js']
                 }
             }
         },

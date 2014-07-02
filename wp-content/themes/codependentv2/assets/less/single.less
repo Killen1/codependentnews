@@ -1,13 +1,15 @@
 #single-post{
-  @media(max-width:@screen-sm){
-    .post-title{
-      font-size: 32px;
+  .post-title{
+    color: @gray-dark;
+    @media(max-width:@screen-sm){
+      font-size: 32px;  
     }
   }
   .post-image{
     position: relative;
     img{
       max-width: 100%;
+      height: auto;
     }
   }
   .image-caption{
@@ -22,6 +24,9 @@
   }
   .addthis_default_style{
     width:315px;
+    @media(max-width:@screen-xs){
+      width: 275px;
+    }
     .at300b, 
     .at300bo, 
     .at300m{
@@ -37,8 +42,13 @@
   #prev-post,
   #next-post{
     .fa-lg{
-      font-size: 3.666667em;
+      font-size: 3.66em;
       line-height: 1.75em;
+    }
+  }
+  @media(max-width: @screen-lg){
+    .tags{
+      margin-bottom: 20px;
     }
   }
 }

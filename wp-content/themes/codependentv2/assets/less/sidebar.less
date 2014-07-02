@@ -2,6 +2,7 @@
 	img{
 		position: relative;
 		max-width: 100%;
+		height: auto;
 	}
 	.excerpt {
 		background: rgba(0, 0, 0, .7);
@@ -9,5 +10,8 @@
 		bottom: 0;
 		padding: 5px 15px 5px 15px;
 		width: 325px;
+		@media(max-width:@screen-xs){
+			width: 258px;
+		}
 	}
 }

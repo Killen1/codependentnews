@@ -10,11 +10,7 @@
 							<div class="excerpt">
 								<p class="margin-top-10 margin-bottom-10">
 									<a href="<?php the_permalink(); ?>" title="<?php the_title();?>" class="wht">
-										<?php 
-											$excerpt = get_the_excerpt();
-											echo substr($excerpt, 0, 75);
-											if (strlen($excerpt) > 75) echo " ...";
-								 		?>
+										<?php the_title(); ?>
 								 	</a>
 							 	</p>
 							</div>

@@ -5,7 +5,7 @@
  */
 //variables set for the site to use
 	define( 'SITE_ROOT', get_option('home') . '/wp-content/themes/codependentv2/' );
-	define( 'CO_ROOT', 'http://dev.codependentnews.com/' ); 
+	define( 'CO_ROOT', 'http://dev.codependentnews.com' ); 
 	define('SITE_HOME', get_option('home') );
 ?>
 <!DOCTYPE html>
@@ -32,7 +32,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div id="main-logo">
-						<a href="<?php echo CO_ROOT ?>" title="The Co-Dependent"><img src="<?php echo SITE_ROOT ?>images/main-logo.png" alt="The Co-Dependent" class="center-block"></a>
+						<a href="<?php echo CO_ROOT ?>" title="The Co-Dependent"><img src="<?php echo SITE_ROOT ?>images/header-banner.png" alt="The Co-Dependent" class="center-block"></a>
 					</div>
 				</div>
 			</div>
@@ -52,17 +52,23 @@
 				</div>
 				<div class="collapse navbar-collapse navbar-ex1-collapse">
 					<?php
-						wp_nav_menu( array( 
-							'theme_location' => 'primary', 
-							'menu_class'     => 'nav-menu', 
-							'items_wrap'     => '<ul class="nav navbar-nav padding-top-5">%3$s</ul>', 
-						)); 
-					?>
+			            wp_nav_menu( array(
+			                'menu'              => 'primary',
+			                'theme_location'    => 'primary',
+			                'depth'             => 2,
+			                'container'         => 'div',
+			                'container_class'   => 'collapse navbar-collapse col-md-12 padding-top-10',
+			        		'container_id'      => 'bs-example-navbar-collapse-1',
+			                'menu_class'        => 'nav navbar-nav',
+			                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+			                'walker'            => new wp_bootstrap_navwalker())
+			            );
+			        ?>
 					<div class="social-media hidden-xs hidden-sm pull-right padding-top-15 text-right">
 						<ul class="addthis_toolbox addthis_32x32_style addthis_default_style padding-0 list-unstyled list-inline">
 							<li><a class="addthis_button_facebook_follow" addthis:userid="codependentnews"><i class="fa fa-facebook"></i></a></li>
 							<li><a class="addthis_button_twitter_follow" addthis:userid="codependentnews"><i class="fa fa-twitter"></i></a></li>
-							<li><a class="addthis_button_youtube_follow" addthis:userid=""><i class="fa fa-youtube"></i></a></li>
+							<li><a class="addthis_button_youtube_follow" addthis:userid="codependentnews"><i class="fa fa-youtube"></i></a></li>
 							<li><a class="addthis_button_tumblr_follow" addthis:userid="codependentnews"><i class="fa fa-tumblr"></i></a></li>
 							<li><a class="rss pull-left" href="<?php echo CO_ROOT?>feed" title="RSS Feed"><i class="fa fa-rss"></i></a></li>
 						</ul>
